@@ -1,0 +1,198 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  display: grid;
+  place-items: center;
+}
+
+.container{
+  width: 800px;
+  height: 600px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+}
+
+
+.ledger{
+  background-color: grey;
+  padding: 20px;
+  flex: 1;
+  color: white;
+
+}
+
+
+
+.ledgere h2,.ledgere h4,.ledgere h1{
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+h2{
+  text-transform: uppercase;
+  color: rgb(224, 222, 82);
+  font-weight: 600;
+}
+
+
+.inc-ex-container{
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+
+
+
+.inc-ex-container div{
+  text-align: center;
+  text-transform: capitalize;
+  padding: 20px;
+  font-size: 18px;
+  flex: 1;
+  border-radius: 2px;
+}
+
+.inc-ex-container div p{
+  font-size: 22px;
+
+}
+
+.exp{
+  background-color: red;
+}
+
+.inc{
+  background-color: rgb(115, 207, 115);
+}
+
+#form{
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.form-control{
+  margin-top: 10px;
+}
+
+label{
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.transaction{
+  flex: 1;
+}
+
+input[type="text"],input[type="number"]{
+  border: 1px solid grey;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.btn{
+  background-color: rgb(55, 55, 202);
+  color: whitesmoke;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  font-weight: 600;
+  border-radius: 20px;
+
+}
+
+.transaction{
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y:scroll;
+}
+
+
+
+.transaction h3{
+  text-transform: uppercase;
+  padding-bottom: 10px ;
+  border-bottom:solid 1px black ;
+  margin-bottom: 5px;
+  }
+
+.trans{
+  list-style: none;
+  margin-bottom: auto;
+}
+
+.trans li{
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  padding: 10px;
+  margin-bottom:10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-del{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-weight: 600;
+  color: white;
+  background-color: red;
+  border: none;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+.trans li.t-inc{
+  border-left: 5px solid rgb(115, 207, 115);;
+}
+
+.trans li.t-exp{
+    border-left: 5px solid red;;
+
+}
+
+.trans li:hover .btn-del{
+  opacity: 1;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: aliceblue;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: blue;
+  border-radius: 8px;
+}
